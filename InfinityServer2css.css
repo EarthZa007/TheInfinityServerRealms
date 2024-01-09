@@ -1,0 +1,133 @@
+/* styles.css */
+
+/* Reset some default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #141e30; /* Dark background color */
+    color: #fff; /* Light text color */
+    transition: background 0.5s, color 0.5s;
+}
+
+.welcome-container {
+    text-align: center;
+    animation: fadeInAnimation 2s ease-in-out;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+h1, h2 {
+    font-size: 3em;
+    background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+    animation: rainbowAnimation 6s linear infinite;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #666;
+    font-size: 1.5em;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+.buttons-container {
+    margin-top: 40px;
+}
+
+.welcome-button {
+    display: inline-block;
+    overflow: hidden;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    border-radius: 30px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 1px;
+    margin: 0 20px;
+}
+
+.subscribe-button {
+    background: linear-gradient(45deg, #ff0080, #8000ff);
+}
+
+.realms-button {
+    background: linear-gradient(45deg, #45aaf2, #0052cc);
+}
+
+.welcome-button:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background: #121212;
+    color: #fff;
+}
+
+.welcome-container.dark-mode {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.dark-mode-toggle:hover {
+    color: #fff;
+}
+
+@keyframes rainbowAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Additional CSS for smaller screens */
+@media (max-width: 768px) {
+    .welcome-button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome To Infinity Server</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="welcome-container">
+        <button onclick="toggleDarkMode()" class="dark-mode-toggle" title="Toggle Dark Mode">
+            🌙
+        </button>
+        <h1>Welcome To</h1>
+        <h2>Infinity Server</h2>
+        <p>This is the first Website of Infinity Server. Join us for an amazing experience!</p>
+        
+        <div class="buttons-container">
+            <!-- Subscribe Button -->
+            <a href="https://youtube.com/@winnerisgod?si=QqPMWekQQZE7nRIb" class="welcome-button subscribe-button" target="_blank">
+                Subscribe
+            </a>
+
+            <!-- Realms Button -->
+            <a href="https://realms.gg/3g5aeqKyrsE" class="welcome-button realms-button" target="_blank">
+                Join Realms
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            const body = document.body;
+            const welcomeContainer = document.querySelector('.welcome-container');
+
+            body.classList.toggle('dark-mode');
+            welcomeContainer.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+</html>
